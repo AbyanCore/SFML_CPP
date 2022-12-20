@@ -14,23 +14,15 @@ int main(){
                     window.close();
                     break;
                 case sf::Event::MouseWheelMoved:
-                    
+                    if (cyl.getPointCount() < 3)
+                    {
+                        cyl.setPointCount(3);
+                    } else {
+                        cyl.setPointCount(cyl.getPointCount() + event.mouseWheel.delta);
+                        std::cout << event.mouseWheel.delta << std::endl;
+                    }
                     break;
             }
-            
-            if (sf::Mouse::Wheel(sf::Event::MouseWheelScrolled))
-            {
-                if (cyl.getPointCount() < 3)
-                {
-                    cyl.setPointCount(3);
-                } else {
-                    cyl.setPointCount(cyl.getPointCount() + event.mouseWheel.delta);
-                    std::cout << event.mouseWheel.delta << std::endl;
-                }
-                    
-            }
-            
-
         }
 
         window.clear();
