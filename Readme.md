@@ -1,1 +1,2 @@
-Pembelajaran SFML CPP
+Pembelajaran SFML C++
+by me
