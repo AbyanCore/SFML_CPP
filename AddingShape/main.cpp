@@ -8,6 +8,16 @@ int main(){
     sf::RectangleShape recta1(sf::Vector2f(100,50));
     sf::CircleShape cirl2(150);
     sf::CircleShape polygon(50,3);
+    sf::ConvexShape CVXS;
+
+    // Convex Shape
+    CVXS.setPointCount(4);
+    CVXS.setPoint(0,sf::Vector2f(600,600));
+    CVXS.setPoint(1,sf::Vector2f(500,600));
+    CVXS.setPoint(2,sf::Vector2f(500,500));
+    CVXS.setPoint(3,sf::Vector2f(400,500));
+
+    CVXS.setFillColor(sf::Color::Yellow);
 
     // Set Color Shape
     recta1.setFillColor(sf::Color::Blue);
@@ -41,6 +51,7 @@ int main(){
         window.draw(recta1);
         window.draw(cirl2);
         window.draw(polygon);
+        window.draw(CVXS);
 
         window.display();
         
